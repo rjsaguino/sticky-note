@@ -1,0 +1,61 @@
+body {
+  background-color: gray;
+  font-family: "Courier New", Courier, monospace;
+}
+
+div.noteContainer {
+  border: none;
+  border-radius: 20px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: grid;
+  height: 160px;
+}
+div.noteContainer:hover {
+  box-shadow: 5px 5px 30px black;
+  transition: 0.5s;
+}
+#textArea {
+  padding: 20px;
+  margin: 25px;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  background-color: beige;
+}
+#textArea:hover,
+#textArea:focus {
+  box-shadow: 5px 5px 30px black;
+
+  transition: 1s;
+}
+#addButton {
+  font-size: 14px;
+  padding: 25px;
+  border-radius: 10%;
+  border: none;
+  cursor: pointer;
+}
+#addButton:hover {
+  font-size: 18px;
+  box-shadow: 5px 5px 10px black;
+  transition: 1s;
+}
+#addButton:active {
+  background-color: black;
+  color: white;
+}
+.inputField {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stickyNotes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px 10px;
+}
