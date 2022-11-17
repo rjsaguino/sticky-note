@@ -13,12 +13,12 @@ body {
   padding: 10px;
   text-align: center;
   display: inline-grid;
-  width: 200px;
-  height: 200px;
-  justify-items: center;
+  min-width: 200px;
+  min-height: 250px;
+  align-items: center;
 }
 .note-container:hover {
-  scale: 200%;
+  scale: 160%;
   transition: 2s;
 }
 
