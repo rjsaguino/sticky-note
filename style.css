@@ -3,19 +3,25 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 
-div.noteContainer {
+.note-container {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 20px;
   border: none;
   border-radius: 20px;
-  justify-content: center;
+  margin: 10px 10px;
+  padding: 10px;
   text-align: center;
-  align-items: center;
-  display: grid;
-  height: 160px;
+  display: inline-grid;
+  width: 200px;
+  height: 200px;
+  justify-items: center;
 }
-div.noteContainer:hover {
-  box-shadow: 5px 5px 30px black;
-  transition: 0.5s;
+.note-container:hover {
+  scale: 200%;
+  transition: 2s;
 }
+
 #textArea {
   padding: 20px;
   margin: 25px;
@@ -30,18 +36,17 @@ div.noteContainer:hover {
 #textArea:hover,
 #textArea:focus {
   box-shadow: 5px 5px 30px black;
-
   transition: 1s;
 }
 #addButton {
+  background-color: beige;
   font-size: 14px;
   padding: 25px;
-  border-radius: 10%;
+  border-radius: 20%;
   border: none;
   cursor: pointer;
 }
 #addButton:hover {
-  font-size: 18px;
   box-shadow: 5px 5px 10px black;
   transition: 1s;
 }
@@ -53,9 +58,26 @@ div.noteContainer:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
 }
-.stickyNotes {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  gap: 10px 10px;
+#sticky-notes {
+  margin: 200px 100px;
+}
+.remove-button {
+  cursor: pointer;
+  padding: 2px 10px;
+  justify-self: end;
+  align-self: flex-end;
+  height: min-content;
+  border: none;
+  border-radius: 5px;
+  background: none;
+}
+.remove-button:hover {
+  background-color: bisque;
+  box-shadow: 5px 5px 30px black;
+  transition: 0.8s;
 }

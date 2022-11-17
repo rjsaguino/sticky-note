@@ -15,9 +15,19 @@ const setRandomColor = () => {
 };
 
 const addNote = () => {
-  let textArea = document.createElement("div");
-  textArea.innerHTML = getNewNote();
-  textArea.classList = "noteContainer";
-  textArea.style.background = setRandomColor();
-  document.querySelector("div.stickyNotes").appendChild(textArea);
+  let note = document.createElement("div");
+  note.innerHTML = getNewNote();
+  note.className = "note-container";
+  note.style.background = setRandomColor();
+
+  const removeButton = document.createElement("button");
+  removeButton.className = "remove-button";
+  removeButton.innerHTML = "x";
+  removeButton.title = "Remove";
+  removeButton.addEventListener("click", () => {
+    document.getElementById("sticky-notes").removeChild(note);
+  });
+
+  note.append(removeButton);
+  document.getElementById("sticky-notes").append(note);
 };
